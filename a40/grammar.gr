@@ -1,0 +1,38 @@
+%token INT STRING DOUBLE QUIT
+
+%union
+{
+	int iv;
+	string *sp;
+	double d;
+}
+
+%%
+
+lines:
+	lines '\n' line
+|
+	line
+;
+
+line:
+	INT
+	{
+		showInt($1);
+	}
+|
+	STRING
+	{
+		showString($1);
+	}
+|
+	DOUBLE
+	{
+		showDouble($1);
+	}
+|
+	QUIT
+	{
+		quit();
+	}
+;
