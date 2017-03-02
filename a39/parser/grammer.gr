@@ -82,19 +82,19 @@ expr:
 		$$ = abs($2);
 	}
 |
-	deg
+	deg expr
 	{
-		$$ = deg();
+		$$ = deg($2);
 	}
 |
-	rad
+	rad expr
 	{
-		$$ = rad();
+		$$ = rad($2);
 	}
 |
-	grad
+	grad expr
 	{
-		$$ = grad();
+		$$ = grad($2);
 	}
 ;
 	
