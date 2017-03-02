@@ -36,10 +36,10 @@ class Parser: public ParserBase
 		STYPE__ getString();
 		STYPE__ getDouble();
 		
-		void showInt(STYPE__ &ptr) { ptr->print(std::cout); }
-		void showString(STYPE__ &ptr) { ptr->print(std::cout); }
-		void showDouble(STYPE__ &ptr) { ptr->print(std::cout); }
-		void quit() { ACCEPT(); }
+		void showInt(STYPE__ &ptr);
+		void showString(STYPE__ &ptr);
+		void showDouble(STYPE__ &ptr);
+		void quit();
 };
 
 
