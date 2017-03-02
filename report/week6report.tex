@@ -56,6 +56,47 @@ All these operators.
 %\lstinputlisting[caption = parser.h]{src/a37/parser/parser.h}
 \lstinputlisting[caption = toint.cc]{src/a37/parser/toint.cc}
 
+\section*{Exercise 39, functions}
+This was actually made before 36-38.
+
+\subsection*{Code listings}
+\lstinputlisting[caption = grammar]{src/a39/parser/grammer.gr}
+\subsubsection*{parser.h snippet}
+\begin{lstlisting}
+	// arithmetic functions:
+	
+		void display(double &value);
+		void done();
+		void prompt();
+		RuleValue &exp(RuleValue &value);
+		RuleValue &ln(RuleValue &value);
+		RuleValue &sin(RuleValue &value);
+		RuleValue &asin(RuleValue &value);
+		RuleValue &sqrt(RuleValue &value);
+		RuleValue &abs(RuleValue &value);
+		
+		RuleValue &deg(RuleValue &value);		
+		RuleValue &grad(RuleValue &value);
+		RuleValue &rad(RuleValue &deg);
+		RuleValue &rad(RuleValue &grad);
+		
+		double const pi = 3.14159;
+		double const e = 2.71828;
+\end{lstlisting}
+
+\subsubsection*{Implementations}
+\lstinputlisting[caption = abs.cc]{src/a39/parser/abs.cc}
+\lstinputlisting[caption = asin.cc]{src/a39/parser/asin.cc}
+\lstinputlisting[caption = deg.cc]{src/a39/parser/deg.cc}
+\lstinputlisting[caption = done.cc]{src/a39/parser/done.cc}
+\lstinputlisting[caption = exp.cc]{src/a39/parser/exp.cc}
+\lstinputlisting[caption = grad.cc]{src/a39/parser/grad.cc}
+\lstinputlisting[caption = ln.cc]{src/a39/parser/ln.cc}
+\lstinputlisting[caption = raddeg.cc]{src/a39/parser/raddeg.cc}
+\lstinputlisting[caption = radgrad.cc]{src/a39/parser/radgrad.cc}
+\lstinputlisting[caption = sin.cc]{src/a39/parser/sin.cc}
+\lstinputlisting[caption = sqrt.cc]{src/a39/parser/sqrt.cc}
+
 \section*{Exercise 40, polymorphic value type class}
 We attempted to make a polymorphic value type class.
 

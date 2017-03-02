@@ -10,8 +10,6 @@
 
 %token  NUMBER
         IDENT
-        LSH
-        RSH
 
 %right  '='
 %left   '+' '-'
