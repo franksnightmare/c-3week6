@@ -8,8 +8,7 @@
 
 %scanner ../scanner/scanner.h
 
-%token NUMBER
-	   IDENT
+%token NUMBER IDENT
 
 %right 'e' ln sin asin sqrt deg grad rad
 %left '^'
@@ -53,7 +52,7 @@ expr:
         $$ = variable();
     }
 |
-	e '^' expr
+	'e' '^' expr
 	{
 		$$ = exp($3);
 	}
