@@ -1,6 +1,8 @@
 #include "parser.ih"
 
-void &Parser::abs(double &value)
+double &Parser::abs(double &value)
 {
 	abs(value);
+	
+	return value;
 }
