@@ -1,0 +1,20 @@
+%filenames scanner
+%interactive
+
+digits      [0-9]+
+optdigits   [0-9]*
+exp         [eE][-+]?{digits}
+
+%%
+
+[ \t]+
+
+{digits}                                |
+{digits}"."{optdigits}{exp}?            |
+{optdigits}"."{digits}{exp}?            return Parser::NUMBER;
+
+[[:alpha:]_][[:alnum:]_]*               return Parser::IDENT;
+QUIT					return ParserBase::Tokens__::QUIT;
+EXIT					return ParserBase::Tokens__::QUIT;
+LIST					return ParserBase::Tokens__::LIST;
+\n|.                                    return matched()[0];
