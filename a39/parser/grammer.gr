@@ -1,0 +1,105 @@
+%class-name Parser
+
+%filenames parser
+%parsefun-source parse.cc
+
+%baseclass-preinclude rulevalue.h
+%stype RuleValue
+
+%scanner ../scanner/scanner.h
+
+%token NUMBER
+	   IDENT
+
+%right 'e' ln sin asin sqrt deg grad rad
+%left '^'
+
+// %debug
+
+%%
+
+lines:
+    lines line
+|
+    line
+;
+
+
+line:
+    expr '\n'
+    {
+        display($1);
+    }
+|
+    error '\n'    
+    {
+        prompt();
+    }
+|
+    '\n'
+    {
+        prompt();
+    }
+;
+
+expr:
+    NUMBER
+    {
+        $$ = value();
+    }
+|
+    IDENT
+    {
+        $$ = variable();
+    }
+|
+	e '^' expr
+	{
+		$$ = exp($3);
+	}
+|	
+	ln expr
+	{
+		$$ = ln($2);
+	}
+|
+	sin expr
+	{
+		$$ = sin($2);
+	}
+|
+	asin expr
+	{
+		$$ = asin($2);
+	}
+|
+	sqrt expr
+	{
+		$$ = sqrt($2);
+	}
+|
+	'|' expr '|'
+	{
+		$$ = abs($2);
+	}
+|
+	deg
+	{
+		$$ = deg();
+	}
+|
+	rad
+	{
+		$$ = rad();
+	}
+|
+	grad
+	{
+		$$ = grad();
+	}
+;
+	
+
+		
+	
+	
