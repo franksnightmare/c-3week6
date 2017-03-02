@@ -1,7 +1,9 @@
 %token INT STRING DOUBLE QUIT
 
 %baseclass-preinclude polytype.h
-%stype BaseType
+%stype std::shared_ptr<BaseType>
+
+%scanner Scanner.h
 
 %%
 
@@ -14,17 +16,20 @@ lines:
 line:
 	INT
 	{
-		showInt($1);
+		$$ = getInt();
+		showInt($$);
 	}
 |
 	STRING
 	{
-		showString($1);
+		$$ = getString();
+		showString($0);
 	}
 |
 	DOUBLE
 	{
-		showDouble($1);
+		$$ = getDouble();
+		showDouble($0);
 	}
 |
 	QUIT
