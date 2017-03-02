@@ -10,9 +10,9 @@
 
 %token  NUMBER
         IDENT
-	QUIT
-	EXIT
-	LIST
+        QUIT
+        EXIT
+        LIST
 
 %right  '='
 %left   '+' '-'
