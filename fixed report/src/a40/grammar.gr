@@ -1,9 +1,12 @@
 %token INT STRING DOUBLE QUIT
 
-%baseclass-preinclude polytype.h
-%stype std::shared_ptr<BaseType>
+%polymorphic INT: int; STRING: std::string; DOUBLE: double;
 
 %scanner Scanner.h
+
+%type <INT> intline
+%type <STRING> stringline
+%type <DOUBLE> doubleline
 
 %%
 
@@ -14,26 +17,47 @@ lines:
 ;
 
 line:
-	INT
+	intline
 	{
-		$$ = getInt();
-		showInt($$);
+		$$ = $1;
 	}
 |
-	STRING
+	stringline
 	{
-		$$ = getString();
-		showString($0);
+		$$ = $1;
 	}
 |
-	DOUBLE
+	doubleline
 	{
-		$$ = getDouble();
-		showDouble($0);
+		$$ = $1;
 	}
 |
 	QUIT
 	{
 		quit();
+	}
+;
+
+intline:
+	INT
+	{
+		$$ = getInt();
+		showInt($$);
+	}
+;
+
+stringline:
+	STRING
+	{
+		$$ = getString();
+		showString($$);
+	}
+;
+
+doubleline:
+	DOUBLE
+	{
+		$$ = getDouble();
+		showDouble($$);
 	}
 ;

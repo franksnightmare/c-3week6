@@ -48,13 +48,20 @@ Remco Bos \\
 All these operators.
 
 \subsection*{Code listings}
-\subsubsection*{Scanner}
+\subsubsection*{Scanner for both 37 and 38}
 \lstinputlisting[caption = lexer]{src/a37/scanner/lexer}
 
 \subsubsection*{Parser}
-%\lstinputlisting[caption = grammar]{src/a37/parser/grammar}
-%\lstinputlisting[caption = parser.h]{src/a37/parser/parser.h}
+\lstinputlisting[caption = grammar]{src/a37/parser/grammar}
+\lstinputlisting[caption = parser.h]{src/a37/parser/parserabridged.h}
 \lstinputlisting[caption = toint.cc]{src/a37/parser/toint.cc}
+
+\section*{Exercise 38, calculator}
+We were tasked with making a calculator that behaves differently than a user would expect.
+
+\subsubsection*{Parser}
+\lstinputlisting[caption = grammar]{src/a38/grammar}
+\lstinputlisting[caption = parser.h]{src/a38/parser.h}
 
 \section*{Exercise 39, functions}
 This was actually made before 36-38.
@@ -101,9 +108,13 @@ This was actually made before 36-38.
 We attempted to make a polymorphic value type class.
 
 \subsection*{Code listings}
+\subsubsection*{Scanner}
+\lstinputlisting[caption = lexer.ll]{src/a40/lexer.ll}
+
+\subsubsection*{Parser}
 \lstinputlisting[caption = grammar.gr]{src/a40/grammar.gr}
-\lstinputlisting[caption = Parser.ih]{src/a40/Parser.ih}
-\lstinputlisting[caption = Parser.h]{src/a40/Parser.h}
+\lstinputlisting[caption = Parser.ih]{src/a40/ParserAbridged.ih}
+\lstinputlisting[caption = Parser.h]{src/a40/ParserAbridged.h}
 \lstinputlisting[caption = getdouble.cc]{src/a40/getdouble.cc}
 \lstinputlisting[caption = getint.cc]{src/a40/getint.cc}
 \lstinputlisting[caption = getstring.cc]{src/a40/getstring.cc}
@@ -111,11 +122,5 @@ We attempted to make a polymorphic value type class.
 \lstinputlisting[caption = showdouble.cc]{src/a40/showdouble.cc}
 \lstinputlisting[caption = showint.cc]{src/a40/showint.cc}
 \lstinputlisting[caption = showstring.cc]{src/a40/showstring.cc}
-
-\subsubsection*{Polymorphic type}
-\lstinputlisting[caption = polytype.ih]{src/a40/polytype.ih}
-\lstinputlisting[caption = polytype.h]{src/a40/polytype.h}
-\lstinputlisting[caption = inttype\_constr.cc]{src/a40/inttype_constr.cc}
-\lstinputlisting[caption = inttype\_print.cc]{src/a40/inttype_print.cc}
 
 \end{document}

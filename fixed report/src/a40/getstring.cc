@@ -1,7 +1,6 @@
 #include "Parser.ih"
 
-STYPE__ Parser::getString()
+string Parser::getString()
 {
-	StringType *ptr = new StringType(d_scanner.matched());
-	return std::move(STYPE__{ptr});
+	return d_scanner.matched();
 }

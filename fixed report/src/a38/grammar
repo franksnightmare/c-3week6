@@ -11,13 +11,14 @@
 %token  NUMBER
         IDENT
 
-%right  '='
+%right  '=' COMPADD COMPSUB COMPDIV
+        COMPMUL COMPLSH COMPRSH
 %right  uMinus
 %left   '+'
-%right	'*'
+%right  '*'
 %left   '/'
-%right  '-'
 %right  '%' LSH RSH
+%right  '-'
 
 // %debug
 
@@ -94,32 +95,32 @@ expr:
         $$ = assign($1, $3);
     }
 |
-    expr '+' '=' expr
+    expr COMPADD expr
     {
     	$$ = assign($1, add($1, $3));
     }
 |
-    expr '-' '=' expr
+    expr COMPSUB expr
     {
     	$$ = assign($1, sub($1, $3));
     }
 |
-    expr '*' '=' expr
+    expr COMPMUL expr
     {
     	$$ = assign($1, mul($1, $3));
     }
 |
-    expr '/' '=' expr
+    expr COMPDIV expr
     {
     	$$ = assign($1, div($1, $3));
     }
 |
-    expr '=' LSH expr
+    expr COMPLSH expr
     {
     	$$ = assign($1, lsh($1, toInt($3)));
     }
 |
-    expr '=' RSH expr
+    expr COMPRSH expr
     {
     	$$ = assign($1, rsh($1, toInt($3)));
     }

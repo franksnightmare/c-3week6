@@ -7,9 +7,6 @@
 
 #include <cstdlib>
 
-// $insert STYPE
-typedef std::shared_ptr<BaseType> STYPE__;
-
 inline void Parser::error(char const *msg)
 {
     std::cerr << msg << '\n';
@@ -41,4 +38,4 @@ inline void Parser::exceptionHandler__(std::exception const &exc)
     // int Parser's sources symbols from the namespace std without
     // specifying std::
 
-//using namespace std;
+using namespace std;

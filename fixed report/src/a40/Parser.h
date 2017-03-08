@@ -32,13 +32,13 @@ class Parser: public ParserBase
         void exceptionHandler__(std::exception const &exc);
     
     // my own functions:
-		STYPE__ getInt();
-		STYPE__ getString();
-		STYPE__ getDouble();
+		int getInt();
+		std::string getString();
+		double getDouble();
 		
-		void showInt(STYPE__ &ptr);
-		void showString(STYPE__ &ptr);
-		void showDouble(STYPE__ &ptr);
+		void showInt(int &someInt);
+		void showString(std::string &someString);
+		void showDouble(double &someDouble);
 		void quit();
 };
 

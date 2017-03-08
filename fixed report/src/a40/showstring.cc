@@ -1,6 +1,6 @@
 #include "Parser.ih"
 
-void Parser::showString(STYLE__ &ptr)
+void Parser::showString(string &someString)
 {
-	ptr->print(cout);
+	cout << someString << '\n';
 }
