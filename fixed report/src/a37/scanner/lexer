@@ -15,13 +15,13 @@ exp         [eE][-+]?{digits}
 
 [[:alpha:]_][[:alnum:]_]*       return Parser::IDENT;
 
-"+="							return Parser::COMPADD;
-"-="							return Parser::COMPSUB;
-"*="							return Parser::COMPMUL;
-"/="							return Parser::COMPDIV;
-"<<="							return Parser::COMPLSH;
-">>="							return Parser::COMPRSH;
-"<<"                            return Parser::LSH;
-">>"                            return Parser::RSH;
+"+="                return Parser::COMPADD;
+"-="                return Parser::COMPSUB;
+"*="                return Parser::COMPMUL;
+"/="                return Parser::COMPDIV;
+"<<="               return Parser::COMPLSH;
+">>="               return Parser::COMPRSH;
+"<<"                return Parser::LSH;
+">>"                return Parser::RSH;
 
-\n|.                            return matched()[0];
+\n|.                return matched()[0];

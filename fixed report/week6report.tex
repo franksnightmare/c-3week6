@@ -44,6 +44,19 @@ Remco Bos \\
 }
 
 \maketitle
+\section*{Exercise 36, expand new grammar}
+We were tasked to add some functionalities to the demo parser.
+
+\subsection*{Code listings}
+\subsubsection*{Scanner}
+\lstinputlisting[caption = lexer.ll]{src/a36/scanner/lexer}
+
+\subsubsection*{Scanner}
+\lstinputlisting[caption = grammar.gr]{src/a36/parser/grammar}
+\lstinputlisting[caption = parser.h]{src/a36/parser/parserabridged.h}
+\lstinputlisting[caption = list.cc]{src/a36/parser/list.cc}
+\lstinputlisting[caption = quit.cc]{src/a36/parser/quit.cc}
+
 \section*{Exercise 37, substantial grammar extension}
 All these operators.
 
@@ -61,35 +74,14 @@ We were tasked with making a calculator that behaves differently than a user wou
 
 \subsubsection*{Parser}
 \lstinputlisting[caption = grammar]{src/a38/grammar}
-\lstinputlisting[caption = parser.h]{src/a38/parser.h}
+\lstinputlisting[caption = parser.h]{src/a38/parserabridged.h}
 
 \section*{Exercise 39, functions}
 This was actually made before 36-38.
 
 \subsection*{Code listings}
 \lstinputlisting[caption = grammar]{src/a39/parser/grammer.gr}
-\subsubsection*{parser.h snippet}
-\begin{lstlisting}
-	// arithmetic functions:
-	
-		void display(double &value);
-		void done();
-		void prompt();
-		RuleValue &exp(RuleValue &value);
-		RuleValue &ln(RuleValue &value);
-		RuleValue &sin(RuleValue &value);
-		RuleValue &asin(RuleValue &value);
-		RuleValue &sqrt(RuleValue &value);
-		RuleValue &abs(RuleValue &value);
-		
-		RuleValue &deg(RuleValue &value);		
-		RuleValue &grad(RuleValue &value);
-		RuleValue &rad(RuleValue &deg);
-		RuleValue &rad(RuleValue &grad);
-		
-		double const pi = 3.14159;
-		double const e = 2.71828;
-\end{lstlisting}
+\lstinputlisting[caption = parser.h]{src/a39/parser/parserabridged.h}
 
 \subsubsection*{Implementations}
 \lstinputlisting[caption = abs.cc]{src/a39/parser/abs.cc}
