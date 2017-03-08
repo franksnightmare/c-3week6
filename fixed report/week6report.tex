@@ -1,0 +1,121 @@
+\documentclass[11pt]{article}
+
+\usepackage{times}
+\usepackage[english]{babel}
+
+% -----------------------------------------------
+% especially use this for you code
+% -----------------------------------------------
+
+\usepackage{courier}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{graphicx}
+
+\definecolor{Gray}{gray}{0.95}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{language=C++,
+	basicstyle = \normalsize\ttfamily,   % the size and fonts that are used
+	tabsize = 2,                    % sets default tabsize
+	breaklines = true,              % sets automatic line breaking
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\color{mygreen}\ttfamily,
+	numbers=left,
+	keepspaces=true,
+	showspaces=false,
+	showstringspaces=false,
+}
+
+\begin{document}
+
+\title{Programming in C/C++ \\
+       Exercises set six: parsers II
+}
+\date{\today}
+\author{Christiaan Steenkist \\
+Jaime Betancor Valado \\
+Remco Bos \\
+}
+
+\maketitle
+\section*{Exercise 37, substantial grammar extension}
+All these operators.
+
+\subsection*{Code listings}
+\subsubsection*{Scanner}
+\lstinputlisting[caption = lexer]{src/a37/scanner/lexer}
+
+\subsubsection*{Parser}
+%\lstinputlisting[caption = grammar]{src/a37/parser/grammar}
+%\lstinputlisting[caption = parser.h]{src/a37/parser/parser.h}
+\lstinputlisting[caption = toint.cc]{src/a37/parser/toint.cc}
+
+\section*{Exercise 39, functions}
+This was actually made before 36-38.
+
+\subsection*{Code listings}
+\lstinputlisting[caption = grammar]{src/a39/parser/grammer.gr}
+\subsubsection*{parser.h snippet}
+\begin{lstlisting}
+	// arithmetic functions:
+	
+		void display(double &value);
+		void done();
+		void prompt();
+		RuleValue &exp(RuleValue &value);
+		RuleValue &ln(RuleValue &value);
+		RuleValue &sin(RuleValue &value);
+		RuleValue &asin(RuleValue &value);
+		RuleValue &sqrt(RuleValue &value);
+		RuleValue &abs(RuleValue &value);
+		
+		RuleValue &deg(RuleValue &value);		
+		RuleValue &grad(RuleValue &value);
+		RuleValue &rad(RuleValue &deg);
+		RuleValue &rad(RuleValue &grad);
+		
+		double const pi = 3.14159;
+		double const e = 2.71828;
+\end{lstlisting}
+
+\subsubsection*{Implementations}
+\lstinputlisting[caption = abs.cc]{src/a39/parser/abs.cc}
+\lstinputlisting[caption = asin.cc]{src/a39/parser/asin.cc}
+\lstinputlisting[caption = deg.cc]{src/a39/parser/deg.cc}
+\lstinputlisting[caption = done.cc]{src/a39/parser/done.cc}
+\lstinputlisting[caption = exp.cc]{src/a39/parser/exp.cc}
+\lstinputlisting[caption = grad.cc]{src/a39/parser/grad.cc}
+\lstinputlisting[caption = ln.cc]{src/a39/parser/ln.cc}
+\lstinputlisting[caption = raddeg.cc]{src/a39/parser/raddeg.cc}
+\lstinputlisting[caption = radgrad.cc]{src/a39/parser/radgrad.cc}
+\lstinputlisting[caption = sin.cc]{src/a39/parser/sin.cc}
+\lstinputlisting[caption = sqrt.cc]{src/a39/parser/sqrt.cc}
+
+\section*{Exercise 40, polymorphic value type class}
+We attempted to make a polymorphic value type class.
+
+\subsection*{Code listings}
+\lstinputlisting[caption = grammar.gr]{src/a40/grammar.gr}
+\lstinputlisting[caption = Parser.ih]{src/a40/Parser.ih}
+\lstinputlisting[caption = Parser.h]{src/a40/Parser.h}
+\lstinputlisting[caption = getdouble.cc]{src/a40/getdouble.cc}
+\lstinputlisting[caption = getint.cc]{src/a40/getint.cc}
+\lstinputlisting[caption = getstring.cc]{src/a40/getstring.cc}
+\lstinputlisting[caption = quit.cc]{src/a40/quit.cc}
+\lstinputlisting[caption = showdouble.cc]{src/a40/showdouble.cc}
+\lstinputlisting[caption = showint.cc]{src/a40/showint.cc}
+\lstinputlisting[caption = showstring.cc]{src/a40/showstring.cc}
+
+\subsubsection*{Polymorphic type}
+\lstinputlisting[caption = polytype.ih]{src/a40/polytype.ih}
+\lstinputlisting[caption = polytype.h]{src/a40/polytype.h}
+\lstinputlisting[caption = inttype\_constr.cc]{src/a40/inttype_constr.cc}
+\lstinputlisting[caption = inttype\_print.cc]{src/a40/inttype_print.cc}
+
+\end{document}

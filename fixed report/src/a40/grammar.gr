@@ -1,0 +1,39 @@
+%token INT STRING DOUBLE QUIT
+
+%baseclass-preinclude polytype.h
+%stype std::shared_ptr<BaseType>
+
+%scanner Scanner.h
+
+%%
+
+lines:
+	lines '\n' line
+|
+	line
+;
+
+line:
+	INT
+	{
+		$$ = getInt();
+		showInt($$);
+	}
+|
+	STRING
+	{
+		$$ = getString();
+		showString($0);
+	}
+|
+	DOUBLE
+	{
+		$$ = getDouble();
+		showDouble($0);
+	}
+|
+	QUIT
+	{
+		quit();
+	}
+;
