@@ -18,10 +18,12 @@ e						return Parser::NUMBER;
 
 LN						return Parser::NUMBER;
 
-\|?SIN\|?				return Parser::NUMBER;
 
-\|?ASIN\|?				return Parser::NUMBER;
 
-\|?SQRT\|?				return Parser::NUMBER;
+ln						return Parser::LN;
+sin						return Parser::SIN;
+asin					return Parser::ASIN;
+sqrt					return Parser::SQRT;
+abs						return Parser::ABS;
 
 \n|.                	return matched()[0];
