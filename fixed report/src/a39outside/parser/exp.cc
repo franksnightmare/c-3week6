@@ -1,6 +1,6 @@
 #include "parser.ih"
 
-double &Parser::exp(double &value)
+RuleValue &Parser::exp(RuleValue &value)
 {
-	return Parser::e ^ value;
+	return RuleValue(Parser::e ^ valueOf(value));
 }

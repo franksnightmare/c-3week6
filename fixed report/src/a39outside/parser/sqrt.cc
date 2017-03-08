@@ -1,11 +1,9 @@
 #include "parser.ih"
 
-double &Parser::sqrt(double &value)
+RuleValue &Parser::sqrt(RuleValue &value)
 {
-	if (value >= 0)
-		sqrt(value);
+	if (valueOf(value) >= 0)
+		return RuleValue(sqrt(valueOf(value)));
 	else
 		error("Value may not be negative");
-	
-	return value;
 }

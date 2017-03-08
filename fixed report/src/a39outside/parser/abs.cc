@@ -1,8 +1,6 @@
 #include "parser.ih"
 
-double &Parser::abs(double &value)
+RuleValue &Parser::abs(RuleValue &value)
 {
-	abs(value);
-	
-	return value;
+	return RuleValue(abs(valueOf(value)));
 }

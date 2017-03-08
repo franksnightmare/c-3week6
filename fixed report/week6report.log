@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.30)  8 MAR 2017 21:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.30)  8 MAR 2017 21:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -250,13 +250,13 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 (./src/a39outside/parser/angletransform.cc) (./src/a39outside/parser/asin.cc)
 (./src/a39outside/parser/constant.cc [21]) (./src/a39outside/parser/deg.cc)
 (./src/a39outside/parser/done.cc) (./src/a39outside/parser/exp.cc)
-(./src/a39outside/parser/grad.cc [22]) (./src/a39outside/parser/ln.cc)
+(./src/a39outside/parser/grad.cc) [22] (./src/a39outside/parser/ln.cc)
 (./src/a39outside/parser/rad.cc) (./src/a39outside/parser/sin.cc)
-(./src/a39outside/parser/sqrt.cc [23]) (./src/a40/lexer.ll)
+(./src/a39outside/parser/sqrt.cc) [23] (./src/a40/lexer.ll)
 (./src/a40/grammar.gr [24] [25]) (./src/a40/ParserAbridged.ih)
-(./src/a40/ParserAbridged.h) (./src/a40/getdouble.cc [26]) (./src/a40/getint.cc
-) (./src/a40/getstring.cc) (./src/a40/quit.cc) (./src/a40/showdouble.cc)
-(./src/a40/showint.cc [27]) (./src/a40/showstring.cc) [28] (./week6report.aux) 
+(./src/a40/ParserAbridged.h) (./src/a40/getdouble.cc) (./src/a40/getint.cc)
+[26] (./src/a40/getstring.cc) (./src/a40/quit.cc) (./src/a40/showdouble.cc)
+(./src/a40/showint.cc) (./src/a40/showstring.cc [27]) [28] (./week6report.aux) 
 ) 
 Here is how much of TeX's memory you used:
  3909 strings out of 494910
@@ -270,7 +270,7 @@ Here is how much of TeX's memory you used:
 /texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmr8a.pfb>
-Output written on week6report.pdf (28 pages, 69944 bytes).
+Output written on week6report.pdf (28 pages, 69809 bytes).
 PDF statistics:
  107 PDF objects out of 1000 (max. 8388607)
  73 compressed objects within 1 object stream

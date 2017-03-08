@@ -43,17 +43,15 @@ class Parser: public ParserBase
 	// arithmetic functions:
 		double angleTransform();
 		
-		double constant();
-		
-		void display(double &value);
+		void display(RuleValue &value);
         void done();
         void prompt();
-		double exp(double &value);
-		double ln(double &value);
-		double sin(double &value);
-		double asin(double &value);
-		double sqrt(double &value);
-		double abs(double &value);
+		RuleValue exp(RuleValue &value);
+		RuleValue ln(RuleValue &value);
+		RuleValue sin(RuleValue &value);
+		RuleValue asin(RuleValue &value);
+		RuleValue sqrt(RuleValue &value);
+		RuleValue abs(RuleValue &value);
 		
 		void deg();		
 		void grad();
@@ -61,7 +59,7 @@ class Parser: public ParserBase
 		
 		double const pi = 3.14159;
 		double const e = 2.71828;
-		double constant();
+		RuleValue constant();
 };
 
 

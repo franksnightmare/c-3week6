@@ -1,12 +1,10 @@
 #include "parser.ih"
 
-double &Parser::asin(double &value)
+RuleValue &Parser::asin(RuleValue &value)
 {
 	double transform = angleTransform();
-	if (value <= 1 || value >= -1)
-		return asin(value) / transform;
+	if (valueOf(value) <= 1 || valueOf(value) >= -1)
+		return RuleValue(asin(valueOf(value)) / transform);
 	else
-		error("Value out of interval -1 < value < 1");
-	
-	return value;
+		error("Value (radians) out of interval -1 < value < 1");
 }

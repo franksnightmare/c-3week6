@@ -1,7 +1,7 @@
 #include "parser.ih"
 
-double &Parser::sin(double &value)
+RuleValue &Parser::sin(RuleValue &value)
 {
-	transform = angleTransform()
-	return sin(transform * value);
+	double transform = angleTransform();
+	return RuleValue(sin(valueOf(transform * value)));
 }
