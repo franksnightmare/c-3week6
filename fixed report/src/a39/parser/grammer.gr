@@ -10,8 +10,9 @@
 
 %token NUMBER IDENT
 
-%right 'e' ln sin asin sqrt deg grad rad
+%right 'e' LN IN ASIN SQRT DEG GRAD RAD
 %left '^'
+%left '+'
 
 // %debug
 
@@ -56,23 +57,33 @@ expr:
 	{
 		$$ = exp($3);
 	}
+|
+	'e' '+' expr
+	{
+		$$ = eplus($3);
+	}
+|
+	'e'
+	{
+		$$ = enumber();
+	}
 |	
-	ln expr
+	LN expr
 	{
 		$$ = ln($2);
 	}
 |
-	sin expr
+	SIN expr
 	{
 		$$ = sin($2);
 	}
 |
-	asin expr
+	ASIN expr
 	{
 		$$ = asin($2);
 	}
 |
-	sqrt expr
+	SQRT expr
 	{
 		$$ = sqrt($2);
 	}
@@ -82,17 +93,17 @@ expr:
 		$$ = abs($2);
 	}
 |
-	deg expr
+	DEG expr
 	{
 		$$ = deg($2);
 	}
 |
-	rad expr
+	RAD expr
 	{
 		$$ = rad($2);
 	}
 |
-	grad expr
+	GRAD expr
 	{
 		$$ = grad($2);
 	}

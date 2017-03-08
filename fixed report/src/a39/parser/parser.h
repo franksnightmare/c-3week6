@@ -37,6 +37,8 @@ class Parser: public ParserBase
         void done();
         void prompt();
 		RuleValue &exp(RuleValue &value);
+		RuleValue &eplus(RuleValue &value);
+		RuleValue &enumber();
 		RuleValue &ln(RuleValue &value);
 		RuleValue &sin(RuleValue &value);
 		RuleValue &asin(RuleValue &value);
