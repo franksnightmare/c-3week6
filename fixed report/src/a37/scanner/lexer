@@ -7,7 +7,7 @@ exp         [eE][-+]?{digits}
 
 %%
 
-[ \t]+
+[ \t]+                          // ignore
 
 {digits}                        |
 {digits}"."{optdigits}{exp}?    |
