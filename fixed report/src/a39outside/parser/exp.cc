@@ -2,7 +2,5 @@
 
 double &Parser::exp(double &value)
 {
-	&Parser::e ^ value;
-	
-	return value;
+	return Parser::e ^ value;
 }

@@ -80,21 +80,23 @@ We were tasked with making a calculator that behaves differently than a user wou
 This was actually made before 36-38.
 
 \subsection*{Code listings}
-\lstinputlisting[caption = grammar]{src/a39/parser/grammer.gr}
-\lstinputlisting[caption = parser.h]{src/a39/parser/parserabridged.h}
+\lstinputlisting[caption = lexer]{src/a39outside/scanner/lexer.ll}
+\lstinputlisting[caption = grammar]{src/a39outside/parser/grammer.gr}
+\lstinputlisting[caption = parser.h]{src/a39outside/parser/parserabridged.h}
 
 \subsubsection*{Implementations}
-\lstinputlisting[caption = abs.cc]{src/a39/parser/abs.cc}
-\lstinputlisting[caption = asin.cc]{src/a39/parser/asin.cc}
-\lstinputlisting[caption = deg.cc]{src/a39/parser/deg.cc}
-\lstinputlisting[caption = done.cc]{src/a39/parser/done.cc}
-\lstinputlisting[caption = exp.cc]{src/a39/parser/exp.cc}
-\lstinputlisting[caption = grad.cc]{src/a39/parser/grad.cc}
-\lstinputlisting[caption = ln.cc]{src/a39/parser/ln.cc}
-\lstinputlisting[caption = raddeg.cc]{src/a39/parser/raddeg.cc}
-\lstinputlisting[caption = radgrad.cc]{src/a39/parser/radgrad.cc}
-\lstinputlisting[caption = sin.cc]{src/a39/parser/sin.cc}
-\lstinputlisting[caption = sqrt.cc]{src/a39/parser/sqrt.cc}
+\lstinputlisting[caption = abs.cc]{src/a39outside/parser/abs.cc}
+\lstinputlisting[caption = angletransform.cc]{src/a39outside/parser/angletransform.cc}
+\lstinputlisting[caption = asin.cc]{src/a39outside/parser/asin.cc}
+\lstinputlisting[caption = constant.cc]{src/a39outside/parser/constant.cc}
+\lstinputlisting[caption = deg.cc]{src/a39outside/parser/deg.cc}
+\lstinputlisting[caption = done.cc]{src/a39outside/parser/done.cc}
+\lstinputlisting[caption = exp.cc]{src/a39outside/parser/exp.cc}
+\lstinputlisting[caption = grad.cc]{src/a39outside/parser/grad.cc}
+\lstinputlisting[caption = ln.cc]{src/a39outside/parser/ln.cc}
+\lstinputlisting[caption = rad.cc]{src/a39outside/parser/rad.cc}
+\lstinputlisting[caption = sin.cc]{src/a39outside/parser/sin.cc}
+\lstinputlisting[caption = sqrt.cc]{src/a39outside/parser/sqrt.cc}
 
 \section*{Exercise 40, polymorphic value type class}
 We attempted to make a polymorphic value type class.

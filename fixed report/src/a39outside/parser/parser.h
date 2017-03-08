@@ -8,12 +8,21 @@
 // $insert scanner.h
 #include "../scanner/scanner.h"
 
+enum AngleMode
+{
+	DEGREES,
+	RADIANS,
+	GRAD
+};
+
 #undef Parser
 class Parser: public ParserBase
 {
     // $insert scannerobject
     Scanner d_scanner;
-        
+    
+    AngleMode d_angleMode = RADIANS;
+    
     public:
         int parse();
 
@@ -32,7 +41,10 @@ class Parser: public ParserBase
         void exceptionHandler__(std::exception const &exc);
 	
 	// arithmetic functions:
-	
+		double angleTransform();
+		
+		double constant();
+		
 		void display(double &value);
         void done();
         void prompt();
@@ -43,13 +55,13 @@ class Parser: public ParserBase
 		double sqrt(double &value);
 		double abs(double &value);
 		
-		double deg(double &value);		
-		double grad(double &value);
-		double rad(double &deg);
-		double rad(double &grad);
+		void deg();		
+		void grad();
+		void rad();
 		
 		double const pi = 3.14159;
 		double const e = 2.71828;
+		double constant();
 };
 
 

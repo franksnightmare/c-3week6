@@ -8,10 +8,9 @@
 
 %scanner ../scanner/scanner.h
 
-%token NUMBER CONST IDENT
+%token NUMBER CONST IDENT DEG GRAD RAD
 
-%right EXP LN SIN ASIN SQRT ABS DEG GRAD RAD
-%left '^'
+%right EXP LN SIN ASIN SQRT ABS
 
 // %debug
 
@@ -71,11 +70,6 @@ expr:
     {
         $$ = variable();
     }
-|
-	'e' '^' expr
-	{
-		$$ = exp($3);
-	}
 |
 	EXP expr
 	{
